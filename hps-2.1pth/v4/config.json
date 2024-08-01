@@ -1,0 +1,39 @@
+ 
+    {
+        "id": "hps-2.1v4",
+        "dataset":"",
+        "data_root":"data/train_v2.csv",
+        "data_type":"image",
+        "augment": false,
+        
+        "model": "hps-v2.1",
+        "pretrained": true,
+        "optimizer":"AdamW",
+        "loss_f":"cross_entropy",
+        "autocast" : true,
+
+        "batch_size": 16,
+        "lr_head": 3e-4,
+        "train_backbone": true,
+        "lr_backbone": 3e-4,
+        "scheduler":"CosineAnnealingLR",
+
+        "step_size":10,
+        "gamma":0.1,
+
+        "eta_min": 1e-6,
+
+        "weight_decay": 1e-4,  
+
+        "epochs":60,
+        "num_classes":2,
+        "hidden_dim": 1024,
+
+        "patience": 40,
+
+        "save_dir": "hps-2.1pth/v4",
+        "load_dir": ""
+    }
+
+
+
